@@ -9,20 +9,20 @@ import React from "react";
 const MyProfile = () => {
   const { data: session } = useSession();
   const Router = useRouter();
-  const [posts, setPosts] = useState([]);
+  const [myPosts, setMyPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await fetch(`/api/users/${session.user.id}/posts`);
       const data = await response.json();
 
-      setPosts(data);
+      setMyPosts(data);
     };
 
-    console.log(posts);
+    console.log(myPosts);
 
     if (session?.user.id) fetchPosts();
-  }, []);
+  }, [session?.user.id]);
 
   const handleEdit = (post) => {
     Router.push(`/update-prompt?id=${post._id}`);
@@ -39,7 +39,7 @@ const MyProfile = () => {
           method: "DELETE",
         });
 
-        const filteredPosts = posts.filter((item) => item._id !== post._id);
+        const filteredPosts = myPosts.filter((item) => item._id !== post._id);
 
         setMyPosts(filteredPosts);
       } catch (error) {
@@ -52,7 +52,7 @@ const MyProfile = () => {
     <Profile
       name="My "
       desc="Welcome to your profile page"
-      data={posts}
+      data={myPosts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
