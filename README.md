@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## PROMPTOPIA
+
+This website will help you with prompts which you can use in different AI tools, to generate desirable answers.
+It also has users authentication which helps in generating, editing and also deleting some of your own prompts
+
+# HOME PAGE
+
+![image](https://github.com/MoharTry/Promptopia/assets/103957742/98d58d87-c804-41d1-b5d1-5ab4abe06d59)
+
+## CreatePost PAGE
+
+![image](https://github.com/MoharTry/Promptopia/assets/103957742/fcc27121-c594-4238-b258-a21a8eddd0c9)
 
 ## Getting Started
 
@@ -13,10 +24,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
